@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="fevicon.png">
+   
+    <title>Login Page</title>
+    <!-- Google Fonts for cursive style -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F1EAFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #DBC4F0;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            
+        }
+        .brand-name h5 {
+            font-family: 'cursive', cursive;
+            font-style: italic;
+        }
+    
+        .brand-name h2 {
+            margin-bottom: 5px; /* Reduced space between h2 and h5 */
+            font-size: 28px;
+            font-family: cursive;
+            color: #333;
+        }
+        .brand-name h5 {
+            margin-top: 0; /* No extra space on top of h5 */
+            margin-bottom: 20px; /* Space before the login form */
+            font-size: 16px;
+           
+        }
+        .login-container input[type="text"], .login-container input[type="password"] {
+            width: 85%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-container button {
+           
+            width: 50%;
+            padding: 8px;
+            background-color: #bb8bf4;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login-container button:hover {
+            background-color: #BA90C6;
+        }
+        .login-container a {
+            display: block;
+            margin-top: 10px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+        .create-account {
+            margin-top: 20px;
+            background-color: #008CBA;
+        }
+        .create-account:hover {
+            background-color: #007BB5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="brand-name">
+            <h2>inTouch!</h2>  
+          <h5>Stay Connected, Stay inTouch.</h5>
+          <hr>
+        </div>
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" >LOGIN</button>
+        </form>
+        <a href="/openResetPassword">Forgot Password?</a>
+        <a href="/openSignUp">Create New Account</a>
+    </div>
+
+</body>
+</html>

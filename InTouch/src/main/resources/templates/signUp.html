@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - KodBook</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F1EAFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .signup-container {
+            background-color: #DBC4F0;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+        .brand-name h5 {
+            font-family: 'cursive', cursive;
+            font-style: italic;
+        }
+    
+        .brand-name h2 {
+            margin-bottom: 5px; /* Reduced space between h2 and h5 */
+            font-size: 28px;
+            font-family: cursive;
+            color: #333;
+        }
+        .brand-name h5 {
+            margin-top: 0; /* No extra space on top of h5 */
+            margin-bottom: 20px; /* Space before the login form */
+            font-size: 16px;
+        }
+        .signup-container input[type="text"], .signup-container input[type="email"],
+        .signup-container input[type="password"], .signup-container input[type="date"] {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .signup-container label {
+            float: left;
+            font-weight: bold;
+            color: #333;
+        }
+        .signup-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #bb8bf4;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .signup-container button:hover {
+            background-color: #BA90C6;
+        }
+        .signup-container a {
+            display: block;
+            margin-top: 10px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .signup-container a:hover {
+            text-decoration: underline;
+        }
+        .gender-container {
+            text-align: left;
+            margin: 10px 0;
+        }
+        .gender-container label {
+            margin-right: 10px;
+        }
+        hr {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signup-container">
+        <div class="brand-name">
+            <h2>inTouch!</h2>  
+            <h5>Create an account, get inTouch.</h5>
+            <hr>
+        </div>
+        <form action="/signUp" method="post">
+            <input type="text" name="username" placeholder="Enter your username" required>
+            <br>
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <br>
+            <input type="password" name="password" placeholder="Enter your password" required>
+            <br>
+            <input type="date" name="dob" required title="Enter your DOB">
+            <br>
+            <div class="gender-container">
+                Male<input type="radio" name="gender" value="M">
+                Female<input type="radio" name="gender" value="F">
+                Others<input type="radio" name="gender" value="O">
+            </div>
+            <button type="submit">SIGNUP</button>
+            <hr>
+            <a href="/">Already have an account? Login instead</a>  
+        </form>
+    </div>
+
+</body>
+</html>
